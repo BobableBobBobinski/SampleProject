@@ -11,20 +11,19 @@ public class FindingSmallest {
         int num2 = sc.nextInt();
         System.out.println("Write the 3 number: ");
         int num3 = sc.nextInt();
-        if(num1 == num2 && num2 == num3){
-            System.out.println("All numbers are equal");
+        minFromThree(num1, num2, num3);
+    }
+    public static int minFromThree(int a, int b, int c){
+        if(a < b && a < c) {
+            return a;
         }
-        else {
-            if (num1 >= num2 && num2 <= num3) {
-                System.out.println("The min is " + num2);
-            }
-            if (num2 >= num1 && num1 <= num3) {
-                System.out.println("The min is " + num1);
-            }
-            if (num1 >= num3 && num3 <= num2) {
-                System.out.println("The min is " + num3);
-            }
+        if(b < c && a > b) {
+            return b;
         }
+        if(c < a && c < b) {
+            return c;
+        }
+        return a;
     }
 
 }
