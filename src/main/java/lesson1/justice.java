@@ -13,7 +13,7 @@ public class justice {
         int corn = scan.nextInt();
         int price = scan.nextInt();
         System.out.println(price);
-        System.out.println("Ammount of corn:" + corn);
+        System.out.println("Amount of corn:" + corn);
         int count = num - corn * price;
         if(num<0 || corn < 0 || price < 0){
             System.exit(0);
