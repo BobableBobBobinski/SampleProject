@@ -10,7 +10,7 @@ public class Stringthing {
         System.out.print(str);
         System.out.println();
         for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i)=='!') {
+            if(str.charAt(i) == '!') {
                 num++;
             }
         }
@@ -19,5 +19,7 @@ public class Stringthing {
         for (int i = str.length() - 1; i > -1; i--) {
             System.out.print(str.charAt(i));
         }
-    }
+        String daword = sc.next(); //in the end IT notices the word and changes it to #####
+
+    }//how about indexOF ?
 }
