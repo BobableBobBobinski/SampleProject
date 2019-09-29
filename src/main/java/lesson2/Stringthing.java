@@ -18,8 +18,16 @@ public class Stringthing {
         System.out.println();
         for (int i = str.length() - 1; i > -1; i--) {
             System.out.print(str.charAt(i));
-        }
-        String daword = sc.next(); //in the end IT notices the word and changes it to #####
+        } //in the end IT notices the word and changes it to #####
 
-    }//how about indexOF ?
+    }
+    public static void BadWords(String str)
+    {
+        if(str.contains("bitches") == true || str.contains("hate") == true) {
+            System.out.println("Bad word!");
+           // String replace("hate", str);
+        } else {
+            System.out.println("nice");
+        }
+    }
 }
