@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Array {
     public static void main(String[] args) {
-        int n = 10;
+        int n = 3;
         int[] mas = new int[n];
         Random r = new Random();
         int k = r.nextInt(151);
