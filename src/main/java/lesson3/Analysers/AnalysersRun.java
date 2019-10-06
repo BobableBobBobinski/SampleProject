@@ -9,9 +9,7 @@ public class AnalysersRun {
         String text = "Fuck you, taxes";
         for (int i = 0; i < analysers.length; i++) {
             System.out.println(analysers[i].analyse(text));
-        }
-        if(analysers.length == 2) {
-            System.out.println();
+
         }
     }
 
