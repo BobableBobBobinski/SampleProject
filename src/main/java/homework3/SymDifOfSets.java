@@ -1,5 +1,6 @@
 package homework3;
 
+import java.util.Random;
 import java.util.*;
 public class SymDifOfSets {
     public static void main(String[] args) {
@@ -7,11 +8,9 @@ public class SymDifOfSets {
         Set<Integer> set2 = new HashSet<>();
         Random rnd = new Random();
         for (Integer x : set1) {
-
             set1.add(rnd.nextInt(15));
         }
         for (Integer y : set2) {
-
             set2.add(rnd.nextInt(30));
         }
         for (Integer x : set1) {
