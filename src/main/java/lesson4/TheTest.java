@@ -1,21 +1,11 @@
 package lesson4;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class TheTest {
-    public static void main(String[] args) {
-        List<Integer> a = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            a.add(i);
-        }
-        int c = 0;
-        List<Integer> b = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            a.add(c);
-        }
-        System.out.println(compareTriplets(a, b));
-    }
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
         List <Integer> list = new ArrayList<>();
         list.add(0);
@@ -75,5 +65,45 @@ public class TheTest {
             return "NO";
         }
     }
-    
+
+
+
+
+    static int designerPdfViewer(int[] h, String word) {
+        int max = 0;
+        for (int i = 0; i < word.length(); i++) {
+            int index = ((int) word.charAt(i) - 97);
+            int height = h[index];
+            if (height > max) {
+                max = height;
+            }
+        }
+        return word.length()*max;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] mas = new int[5];
+        int b = 5;
+        int a = sc.nextInt();
+        int c = b/a;
+        try {
+            System.out.println(c);
+        } catch (Exception ch) {
+            System.out.println("Wrong numbers");
+            System.out.println(ch.getMessage());
+        }
+        try {
+            a = 0;
+        } catch (InputMismatchException e) {
+            e.printStackTrace();
+        }
+
+        //if try finds mistake with 1 catch, it ends (so no checking 2 catch)
+       // int[] mas = new int[Integer.MAX_VALUE];
+        // don't overdo try, make another one
+        //in Throwable there're errors and exceptions (checkable). Errors are uncatchable (memory overflow)
+        //Exceptions --> RunTimeException is unckeckable
+
+    }
 }
