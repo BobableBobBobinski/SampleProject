@@ -10,13 +10,15 @@ public class UserServise {
 
     public UserServise() {
         users = new HashMap<>();
-        User adminUser = new User("Bob", "Bobich", "Bob Bobinski");
+        User adminUser = new User("admin", "Bobich", "Bobi");
     }
 
-    public User getBylogin(String login) {
+    public User getByLogin (String login){
+        if(users.containsKey(login)) {
+            System.out.println(users.get(login));
+        }
         return users.get(login);
     }
-
     public boolean addUser(User user) {
         if(!users.containsKey(user.getLogin())) {
             users.put(user.getLogin(), user);
@@ -36,18 +38,22 @@ public class UserServise {
     }
 
     public List<User> getAllUsers() {
+        System.out.println(users.values());
        return new ArrayList<>(users.values());
     }
     public User getByFullname(String fullname) {
         return users.get(fullname);
     }
     public boolean editUser(User user) {
-        if(user.getFullName() != null) {
-            users.get(user.getFullName());
-            return true;
-        } else {
-            return false;
+        for (Map.Entry<String, User> pair : users.entrySet()) {
+            if (pair.getKey().equals(user.getLogin())) {
+                users.remove(user.getLogin());
+                users.put(user.getLogin(), user);
+                System.out.println("Edited");
+                return true;
+            }
         }
+        return false;
     }
     public boolean auth(String login, String password) {
         if (users.containsKey(login)) {
