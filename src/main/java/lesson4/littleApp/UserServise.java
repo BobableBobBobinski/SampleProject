@@ -49,7 +49,6 @@ public class UserServise {
             if (pair.getKey().equals(user.getLogin())) {
                 users.remove(user.getLogin());
                 users.put(user.getLogin(), user);
-                System.out.println("Edited");
                 return true;
             }
         }
@@ -60,13 +59,9 @@ public class UserServise {
             User user = users.get(login);
             if (users.containsKey(password)) {
                 user = users.get(password);
-                System.out.println("Yeah, welcome");
-            } else {
-                System.out.println("Wrong password!");
             }
             return true;
         } else {
-            System.out.println("Wrong login");
             return false;
         }
     }
