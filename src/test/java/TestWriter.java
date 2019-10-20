@@ -13,4 +13,8 @@ public class TestWriter {
         map.put("Ami", new User("AmeSora", "Rain", "AmikoOdzaki"));
         FileHelper.saveTo("C:\\Users\\pupil\\Desktop\\MPolina\\src\\main\\resources\\file.txt", map);
     }
+    public void testRead(){
+        Map<String, User> map =
+        FileHelper.readFrom("src\\main\\resources\\users");
+    }
 }

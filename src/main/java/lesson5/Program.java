@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         List<User> list = new ArrayList<>();
-        try (FileReader reader = new FileReader("C:\\Users\\pupil\\Desktop\\MPolina\\src\\main\\resources\\file1")) {
+        try (FileReader reader = new FileReader("src\\main\\resources\\file1")) {
 
 //            BufferedReader bufferedReader = new BufferedReader(reader);
 //            String fromFile = bufferedReader.readLine();

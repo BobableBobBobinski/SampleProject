@@ -7,12 +7,13 @@ import java.util.Map;
 
 public class UserServise {
     private Map<String, User> users;
-
+    private final String PATH_TO_FILE = "src\\main\\resources\\users";
     public UserServise() {
-        users = new HashMap<>();
-        User adminUser = new User("admin", "Bobich", "Bobi");
+        users = FileHelper.readFrom(PATH_TO_FILE);
     }
-
+    public void saveData() {
+        FileHelper.saveTo(PATH_TO_FILE, users);
+    }
     public User getByLogin (String login){
         if(users.containsKey(login)) {
             System.out.println(users.get(login));
@@ -37,11 +38,14 @@ public class UserServise {
         }
     }
 
-    public List<User> getAllUsers() {
+    public List<User> getAllUsers() { //change it to admin-only rights
         System.out.println(users.values());
        return new ArrayList<>(users.values());
     }
     public User getByFullname(String fullname) {
+        if(users.containsKey(fullname)) {
+            System.out.println(users.get(fullname));
+        }
         return users.get(fullname);
     }
     public boolean editUser(User user) {

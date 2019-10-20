@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Writer {
     public static void main(String[] args) {
-        try (FileWriter writer = new FileWriter("C:\\Users\\pupil\\Desktop\\MPolina\\src\\main\\resources\\file1", false)) {
+        try (FileWriter writer = new FileWriter("src\\main\\resources\\file1", false)) {
             Random rnd = new Random();
 
 

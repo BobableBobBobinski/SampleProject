@@ -83,6 +83,7 @@ public class App {
                         p = " ";
                         System.exit(0);
                 }
+                userServise.saveData();
             }
         }
     }
