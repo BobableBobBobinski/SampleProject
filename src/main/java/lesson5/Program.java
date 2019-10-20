@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         List<User> list = new ArrayList<>();
-        try (FileReader reader = new FileReader("C:\\Users\\pupil\\Desktop\\MPolina\\src\\main\\resources\\file.txt")) {
+        try (FileReader reader = new FileReader("C:\\Users\\pupil\\Desktop\\MPolina\\src\\main\\resources\\file1")) {
 
 //            BufferedReader bufferedReader = new BufferedReader(reader);
 //            String fromFile = bufferedReader.readLine();
@@ -29,7 +29,7 @@ public class Program {
                 list.add(user);
 
             }
-
+            // flush() - writing all remembered things in the file at once
         } catch (IOException e) {
             System.out.println("Error! " + e.getMessage());
         } catch (NoSuchElementException m) {
